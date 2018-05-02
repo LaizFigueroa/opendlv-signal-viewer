@@ -65,7 +65,9 @@ message opendlv.proxy.PedalPositionReading [id = 1041] {
 */
 
 message ImuData [id = 1412] {
-  float accel [id = 1];
+  float accel_x [id = 1];
+  float accel_y [id = 2];
+  float accel_z [id = 3];
   float gyro [id =2];
 }
 
