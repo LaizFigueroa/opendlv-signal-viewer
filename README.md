@@ -26,18 +26,18 @@ No dependencies! The following dependencies are part of the source distribution:
 ## Usage
 This microservice is created automatically on changes to this repository via
 Docker's public registry for:
-* [x86_64](https://hub.docker.com/r/chalmersrevere/opendlv-signal-viewer-amd64/tags/)
-* [armhf](https://hub.docker.com/r/chalmersrevere/opendlv-signal-viewer-armhf/tags/)
+* [x86_64](https://hub.docker.com/r/laiz/webview_ubuntu/)
+* [armhf](https://hub.docker.com/r/laiz/webview/)
 
 To use this microservice for viewing any messages from the OpenDLV Standard
-Message Set that are exchanged in a running OpenDLV.io session (running at
-111 in the example), simply run it as follows:
+Message Set that are exchanged in a running OpenDLV.io session running at
+240, simply run it as follows:
 
 ```
-docker run --rm --net=host -p 8080:8080 chalmersrevere/opendlv-signal-viewer-multi:v0.0.4 --cid=111
+docker run --rm -ti --net=host -p 8082:8082 laiz/webview --cid=240
 ```
 
-Now, simply point your web-browser to the IP address and port 8080 where you
+Now, simply point your web-browser to the IP address and port 8082 where you
 started this microservice to see any currently exchanged messages:
 
 ![screenshot from signal viewer](https://raw.githubusercontent.com/chalmers-revere/opendlv-signal-viewer/master/signal-viewer.gif)
